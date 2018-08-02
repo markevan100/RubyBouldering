@@ -1,6 +1,6 @@
 class Person
 
-array = Array.new
+@@hash = hash.new
 
   attr_reader :first_name, :last_name, :birth_year
 
@@ -8,7 +8,6 @@ array = Array.new
     @first_name = first_name
     @last_name = last_name
     @birth_year = birth_year
-    array << birth_year
   end
 
   def f_name

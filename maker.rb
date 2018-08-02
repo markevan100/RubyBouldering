@@ -1,18 +1,17 @@
 class Book
 
-  @@hash = Hash.new
+  hash = {}
   attr_reader :title, :pub_date
 
   def initialize(title, pub_date)
     @title = title
     @pub_date = pub_date
-    @@hash["#{title}"] = pub_date
+    hash["#{title}"] = pub_date
   end
-#This is a test comment
-@@hammer = @@hash.sort_by { |key,value| value }
 
   def self.oldest
-  puts @@hammer[0]
- end
+  hash.sort_by { |key,value| value }
+  puts hash
+  end
 
 end
