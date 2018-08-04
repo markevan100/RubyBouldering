@@ -53,6 +53,13 @@ def self.oldest
   first_array = sorted_array[0]
   puts first_array[0]
 end
+
+def self.youngest
+  sorted_array = @@people_all.sort_by { |key, value| value }.reverse
+  first_array = sorted_array[0]
+  puts first_array[0]
+end
+
 end
 
 @josh = Person.new("Josh", "Thompson", 1989)
