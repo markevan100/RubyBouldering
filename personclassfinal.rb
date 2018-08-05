@@ -12,8 +12,13 @@ class Person
     @birth_year = birth_year
   end
 
+# hint: def self.all will let Person.all work
+
   def f_name
-    puts "This person is named #{first_name}!"
+    # puts "This person is named #{first_name}!"
+    # all these methods will fail, because the "return value"
+    # of a "puts" statement is nil. I'll do this first one for you:
+    first_name
   end
 
   def l_name
@@ -62,7 +67,5 @@ end
 
 end
 
-@josh = Person.new("Josh", "Thompson", 1989)
-@katy = Person.new("Katy", "Wellington", 1991)
-@kristi = Person.new("Kristi", "Thompson", 1990)
-@mark = Person.new("Mark", "Modak", 1985)
+
+
