@@ -3,22 +3,6 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require_relative 'personclassfinal'
 
-class VampTest < Minitest::Test
-  def test_all_persons
-    josh = Person.new("Josh", "Thompson", 1989)
-    katy = Person.new("Katy", "Wellington", 1991)
-    kristi = Person.new("Kristi", "Thompson", 1990)
-    mark = Person.new("Mark", "Modak", 1985)
-
-    assert_equal 4, Person.all.count
-
-    assert_instance_of Person, Person.all.first
-
-    assert_includes Person.all, josh
-  end
-end
-
-=begin
 class VampireTest < Minitest::Test
   def test_it_can_exist
 
@@ -73,5 +57,18 @@ class VampireTest < Minitest::Test
 
     assert_equal "Katy", Person.youngest
   end
+
+  def test_all_persons
+    Person.all.clear
+    josh = Person.new("Josh", "Thompson", 1989)
+    katy = Person.new("Katy", "Wellington", 1991)
+    kristi = Person.new("Kristi", "Thompson", 1990)
+    mark = Person.new("Mark", "Modak", 1985)
+
+    assert_equal 4, Person.all.count
+
+    assert_instance_of Person, Person.all.first
+
+    assert_includes Person.all, josh
+  end
 end
-=end
