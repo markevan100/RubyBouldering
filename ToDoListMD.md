@@ -62,3 +62,25 @@ class List
 
 end
 ```
+
+Ok, time to do some adding. I first came up with this:
+
+```ruby
+def add(task_name, list_name)
+    list_name << task_name
+  end
+```
+
+But then I realized, what am I calling that method on if I have both the task and the list as arguments? That doesn't make any sense. Ok, I need to call it on one of them, which would look something like this `list.add(this_task)`. But, in the code in the method, how do I reference my list if I don't have it as an argument? `.self`? `.push`?
+
+How about something easy like this:
+```ruby
+  def add(task_name)
+     @all_tasks << task_name
+  end
+  ```
+  
+  So, that seems to make sense. Except how does it know which list's @all_tasks array to add to if I have initialized more than one? Because I'm calling the method on that list. Hmmmm, starting to make some sense. That might work. Let's throw this baby in the console and try it out. 
+  
+
+
