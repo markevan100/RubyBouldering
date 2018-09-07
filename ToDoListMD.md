@@ -82,5 +82,5 @@ How about something easy like this:
   
   So, that seems to make sense. Except how does it know which list's @all_tasks array to add to if I have initialized more than one? Because I'm calling the method on that list. Hmmmm, starting to make some sense. That might work. Let's throw this baby in the console and try it out. 
   
-
+![screenshot] (https://drive.google.com/file/d/12r3deOy2pcnI3lZjT-CmFO2t86Yk2_Hl/view?usp=sharing)
 
