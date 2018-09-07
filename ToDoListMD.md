@@ -35,11 +35,30 @@ end
 #class should have: attr_accessor and initialize
 class Task
 
-  attr_reader :description
+  attr_accessor :description
 
   def initialize(description)
     @description = description
   end
+
+end
+```
+
+I've also been told that I will need to create a `.new` method for at least my List class. I'm going to leave that be for a bit and come back to it. My next task it to set up an `all_tasks` array. This will be new for each List object, so I'm going to put it in the initialize method. I guess I'm going to give it an @ to make in an instance variable (is this right?) because I want it to be connected to each instance of the List class that I initiate. I also need to create a reader for this. Should I do that manually or use at attr_? I think I'll do it manually because it isn't an attribute of the instance that the user will be actually setting when they initiate (like name), it'll just be created in the background. This is probably stupid logic. Anyway, now I have this:
+
+```ruby
+class List
+
+  attr_accessor :name
+
+  def initialize(name)
+    @name = name
+    @all_tasks = []
+  end
+
+  def all_tasks
+    @all_tasks
+  end 
 
 end
 ```
