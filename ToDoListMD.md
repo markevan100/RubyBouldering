@@ -4,7 +4,7 @@ I signed up for the PRO version, which gives me access to a final project. For t
 
 To more closely mimic that 'real' workflow, I am going to try to journal my experience here for us (read, to you, but really also for me.)
 
-So, what, you ask, will I be ATTEMPTING to do? Just that! Create a ToDo list. I'll use Atom to write the program. The first set of instructions is that I will need to create two different classes. Those will be Lists and Tasks. Next, I have this set of 'recommendaitons'. 
+So, what, you ask, will I be ATTEMPTING to do? Just that! Create a ToDo list. I'll use Atom to write the program. The first set of instructions is that I will need to create two different classes. Those will be Lists and Tasks. Next, I have this set of 'recommendaitons': 
 
     **List Class**
     Create a list
@@ -17,3 +17,29 @@ So, what, you ask, will I be ATTEMPTING to do? Just that! Create a ToDo list. I'
     
     **Task Class**
     Create a task item
+
+Under each class, my assumption is that I will need to create both an attr_reader (or other option, ie. writer, accessor, depending on need) and an initialize method. So, I'm starting with this. 
+
+```ruby
+#class should have: attr_accessor and initialize
+class List
+
+  attr_accessor :name
+
+  def initialize(name)
+    @name = name
+  end
+
+end
+
+#class should have: attr_accessor and initialize
+class Task
+
+  attr_reader :description
+
+  def initialize(description)
+    @description = description
+  end
+
+end
+```
